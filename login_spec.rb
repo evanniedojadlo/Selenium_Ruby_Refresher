@@ -16,6 +16,8 @@ describe 'Login' do
 		@driver.find_element(id: 'password').send_keys 'SuperSecretPassword!'
 		@driver.find_element(css: 'button').click
 		#@driver.find_element(id: 'login').click note that we could also use this option
+
+		expect(@driver.find_element(css: '.flash.success').displayed).to be_true
 	end
 
 
