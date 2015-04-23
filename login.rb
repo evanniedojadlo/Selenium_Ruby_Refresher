@@ -22,6 +22,7 @@ def with(username, password)
 	@driver.find_element(SUBMIT_BUTTON).click
 end
 
+#returns boolean
 def success_message_present?
 	@driver.find_element(SUCCESS_MESSAGE).displayed?
 end
