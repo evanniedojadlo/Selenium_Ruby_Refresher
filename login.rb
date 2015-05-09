@@ -15,18 +15,18 @@ class Login < Base
 
 def initialize(driver) #class has to receive driver object
 	@driver = driver
-	@driver.get 'http://the-internet.herokuapp.com/login'
+	visit 'http://the-internet.herokuapp.com/login'
 end
 
 def with(username, password)
-	@driver.find_element(USERNAME_INPUT).send_keys username
-	@driver.find_element(PASSWORD_INPUT).send_keys password
-	@driver.find_element(SUBMIT_BUTTON).click
+	send_keys USERNAME_INPUT, username
+	send_keys PASSWORD_INPUT, password
+	click SUBMIT_BUTTON
 end
 
 #returns boolean
 def success_message_present?
-	@driver.find_element(SUCCESS_MESSAGE).displayed?
+	displayed?SUCCESS_MESSAGE
 end
 
 end
