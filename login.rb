@@ -1,4 +1,6 @@
-class Login
+require_relative 'base'
+
+class Login < Base
 
 #declare all locators on the page
 #constants
