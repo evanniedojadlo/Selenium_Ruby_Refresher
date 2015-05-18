@@ -1,4 +1,4 @@
-require 'selenium-webdriver'
+#require 'selenium-webdriver' not required anymore due to base.rb containing it
 require_relative 'login' #used relative because this is in the same directory
 
 describe 'Login' do 
