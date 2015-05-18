@@ -17,4 +17,10 @@ describe 'Login' do
 		expect(@login.success_message_present?).to be_true
 	end
 
+	it 'failed' do
+		@login.with 'tomsmith', 'asdf'
+		#expect(@login.success_message_present?).to be_false
+		expect(@login.failure_message_present?).to be_true
+	end
+
 end
