@@ -19,7 +19,8 @@ describe 'Login' do
 
 	it 'failed' do
 		@login.with 'tomsmith', 'asdf'
-		#expect(@login.success_message_present?).to be_false
+		#expect(@login.success_message_present?).to be_false we are not using this because actually 
+		#seeing the failure message below is more explicit
 		expect(@login.failure_message_present?).to be_true
 	end
 
