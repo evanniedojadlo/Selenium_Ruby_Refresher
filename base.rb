@@ -1,3 +1,5 @@
+#base is used for building out the tests structure
+
 require 'selenium-webdriver'
 
 class Base
