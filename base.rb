@@ -22,7 +22,7 @@ class Base
 
 
 	def displayed?(locator)
-			find_element(locator).displayed?
+		find_element(locator).displayed?
 	end
 	
 	#private only to this class
