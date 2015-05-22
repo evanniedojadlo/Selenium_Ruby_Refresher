@@ -3,7 +3,7 @@ require_relative 'base'
 class Login < Base
 
 #declare all locators on the page
-#constants
+#all caps below are constants
 
 	USERNAME_INPUT = { id: 'username' }
 	PASSWORD_INPUT = { id: 'password' }
@@ -14,11 +14,13 @@ class Login < Base
 #with a class we have a constructor or initializer in ruby
 #this class has to receive the driver object and so that it's accessible to the entire class we use a class instance variable
 
-	def initialize(driver) #class has to receive driver object
+	#class has to receive driver object
+	def initialize(driver)
 		@driver = driver
 		visit 'http://the-internet.herokuapp.com/login'
 	end
 
+	#enters username and password
 	def with(username, password)
 		send_keys USERNAME_INPUT, username
 		send_keys PASSWORD_INPUT, password
