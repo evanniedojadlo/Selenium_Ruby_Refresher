@@ -32,8 +32,4 @@ class Login < Base
 		displayed? SUCCESS_MESSAGE
 	end
 
-	def failure_message_present?
-		displayed? FAILURE_MESSAGE
-	end
-
 end
