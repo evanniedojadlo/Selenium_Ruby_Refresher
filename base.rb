@@ -27,13 +27,22 @@ class Base
 	def displayed?(locator)
 		find_element(locator).displayed?
 	end
-end
-
-
 	
 	#private only to this class
 	#yield allows us to pass code into this method when we call it in this case yield is replaced with 
 	#the find element locator within displayed?
+
+	private
+
+	def rescue_exceptions
+		begin
+			yield
+		rescue Selenium::WebDriver::Error::NoSuchElementError
+			false
+		end
+	end
+
+end
 
 
 
