@@ -27,6 +27,10 @@ class Base
 	def displayed?(locator)
 		find_element(locator).displayed?
 	end
+
+	def wait_for(seconds = 15)
+		Selenium::WebDriver::Wait.new(timeout: seconds).until { yield }
+	end
 	
 	#private only to this class
 	#yield allows us to pass code into this method when we call it in this case yield is replaced with 
