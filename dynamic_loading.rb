@@ -5,6 +5,8 @@ class DynamicLoading < Base
 	START_BUTTON = { css: '#start button' }
 	FINISH_TEXT = { id: 'finish' }
 
+
+#auto loads the page url 
 	def initialize(driver)
 		@driver = driver
 		visit 'http://the-internet.herokuapp.com/dynamic_loading/2'
