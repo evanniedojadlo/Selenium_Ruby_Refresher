@@ -1,4 +1,4 @@
-require_relative 'base'
+require_relative 'dynamic_loading'
 
 describe 'Dynamic Loading' do
 
