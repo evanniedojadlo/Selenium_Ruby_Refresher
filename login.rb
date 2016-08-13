@@ -16,8 +16,11 @@ class Login < Base
 
 	#class has to receive driver object
 	def initialize(driver)
-		@driver = driver
+		super
+		#@driver = driver #instance variable 
 		visit 'http://the-internet.herokuapp.com/login'
+		raise 'Login page not ready' unless
+			is_displayed?(LOGIN_FORM)
 	end
 
 	#enters username and password
