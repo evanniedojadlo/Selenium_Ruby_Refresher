@@ -24,8 +24,11 @@ class Base
 		find_element(locator).send_keys text
 	end
 
-	def displayed?(locator)
-		find_element(locator).displayed?
+	def displayed?(locator) 
+		begin #rescues and returns false instead of failing the entire test
+			find_element(locator).displayed?
+		rescue Selenium::WebDriver::Error::NoSuchElementError
+			false
 	end
 
 	def wait_for(seconds = 15)

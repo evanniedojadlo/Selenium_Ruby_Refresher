@@ -5,6 +5,7 @@ class Login < Base
 #declare all locators on the page
 #all caps below are constants
 
+	LOGIN_FORM = { id: 'login'}
 	USERNAME_INPUT = { id: 'username' }
 	PASSWORD_INPUT = { id: 'password' }
 	SUBMIT_BUTTON = { css: 'button' }
